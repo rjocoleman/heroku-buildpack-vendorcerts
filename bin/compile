@@ -5,14 +5,11 @@ indent() {
   sed -u 's/^/       /'
 }
 
-mkdir /app/certs
-cd /app/certs
-
-echo "-----> Found a .cert_urls file"
+echo "-----> Found a .file_urls file"
 
 # Bail early but noisily
-if [ ! -s $1/.cert_urls ]; then
-  echo ".cert_urls empty. Skipping." | indent
+if [ ! -s $1/.file_urls ]; then
+  echo ".file_urls empty. Skipping." | indent
   exit 0
 fi
 
@@ -23,4 +20,4 @@ while read url; do
     echo Vendoring $url | indent
     curl -L -O -J --silent $url
   fi
-done < .cert_urls
+done < .file_urls
