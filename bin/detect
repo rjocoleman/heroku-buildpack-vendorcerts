@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ -f $1/.vendor_urls ]; then
-    echo "VendorBinaries"
+if [ -f $1/.cert_urls ]; then
+    echo "VendorCerts"
     exit 0
 else
     exit 1
