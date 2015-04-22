@@ -5,8 +5,8 @@ indent() {
   sed -u 's/^/       /'
 }
 
-mkdir /certs
-cd /certs
+mkdir /app/certs
+cd /app/certs
 
 echo "-----> Found a .cert_urls file"
 

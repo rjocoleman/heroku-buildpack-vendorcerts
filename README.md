@@ -20,6 +20,6 @@ Usage
            Vendoring https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
     ...
 
-The buildpack will detect that your app has a `.cert_urls` file in the root. Each line in this file will be treated as a URL pointing at a tarball to fetch and extract into `/certs`.
+The buildpack will detect that your app has a `.cert_urls` file in the root. Each line in this file will be treated as a URL pointing at a tarball to fetch and extract into `/app/certs`.
 
 Shamelessly based on https://github.com/peterkeen/heroku-buildpack-vendorbinaries
